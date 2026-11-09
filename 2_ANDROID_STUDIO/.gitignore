@@ -1,0 +1,23 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures/
+raspberry/.env
+*.key
+raspberry/certs/
+aws/.env
+aws/certs/
+aws/nodo.key
+aws/nodo.pub
+aws/*.key
+# Secretos del nodo (U3): pegar los valores reales solo en local
+aws/wokwi/certificados.h
+aws/wokwi/config.h
+aws/*.crt
+aws/*.pem
+aws/politica.json
+aws/regla_*.json

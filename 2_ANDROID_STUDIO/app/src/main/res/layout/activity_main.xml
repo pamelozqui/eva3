@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvConexion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desconectado" />
+
+        <!-- MONITOREO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nodo A · Captador"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHumedad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humedad: -- %"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tvNivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nivel del estanque: -- %"
+            android:textSize="22sp" />
+
+        <ProgressBar
+            android:id="@+id/pbNivel"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100" />
+
+        <!-- CONTROL -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nodo B · Riego"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRiego"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riego: --"
+            android:textSize="22sp" />
+
+        <Switch
+            android:id="@+id/swAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modo automático de la app (humedad ≥ 90 %, estanque ≥ 15 %, de noche)" />
+
+        <CheckBox
+            android:id="@+id/cbLuz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Hay luz (solo para la lectura simulada)" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnOn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Regar ON" />
+
+            <Button
+                android:id="@+id/btnOff"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Regar OFF" />
+        </LinearLayout>
+
+        <!-- SIMULADOR -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Simular Nodo A"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSimHum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humedad: 70 %" />
+
+        <SeekBar
+            android:id="@+id/sbHum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="70" />
+
+        <TextView
+            android:id="@+id/tvSimNivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nivel: 60 %" />
+
+        <SeekBar
+            android:id="@+id/sbNivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="60" />
+
+        <Button
+            android:id="@+id/btnPublicar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Publicar lectura simulada" />
+
+        <Button
+            android:id="@+id/btnHistorial"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Ver historial" />
+
+        <Button
+            android:id="@+id/btnSalir"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar sesión" />
+    </LinearLayout>
+</ScrollView>
